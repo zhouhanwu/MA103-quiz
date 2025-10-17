@@ -14,7 +14,7 @@ def prime_factorise(n, prime_factors=None):
 
     if n > 1:
         composite_factor_found = False
-        for k in range(1+1,int(n/2)+1):
+        for k in range(1+1,int(n**0.5)+1):
             if n % k == 0:
                 # At this point, since we start from the smallest number, k must be prime, so we find the
                 # multiplicative inverse of k which is j. We then ensure that j is not 1 (occurs when n == 2).
@@ -36,5 +36,5 @@ def prime_factorise(n, prime_factors=None):
     return(prime_factors)
 
 
-results = prime_factorise(69)
+results = prime_factorise(999999999)
 print(results)
